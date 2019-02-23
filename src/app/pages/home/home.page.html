@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bob's Banana Budget
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="budget-box"> 
+    <div class="budget-text" *ngIf="!budget">
+      The world is your banana.
+      <p>Budget for it.</p>
+    </div>
+    <div class="budget-text" *ngIf="budget">
+      <p>Your budget is ${{budget}}.</p>
+    </div>
+    <div class="budget-text" *ngIf="error">
+      <p>{{error}}</p>
+    </div>
+  </div>
+  <ion-item id="rounded">
+    <!-- <ion-label fixed>Date</ion-label> -->
+    <ion-input type="date" [(ngModel)]="date" placeholder="Date"></ion-input>
+  </ion-item>
+  <ion-item id="rounded">
+    <!-- <ion-label fixed>Number of Days</ion-label> -->
+    <ion-input type="number" [(ngModel)]="numberOfDays" placeholder="Number of Days" min="0" minlength="3" max="365"></ion-input>
+  </ion-item>
+  <div class="button">
+    <ion-button (click)="budgetDays()"  expand="full" size="large" color="primary">Budget</ion-button>
+  </div>
+</ion-content>
