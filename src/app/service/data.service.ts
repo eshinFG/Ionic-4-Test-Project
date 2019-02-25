@@ -9,12 +9,13 @@ import { ToastController } from '@ionic/angular';
 })
 export class DataService {
   endPointUrl;
+  error: Object = { message: "API Error. Please make sure API is running." };
   constructor(private http: HttpClient,private toast: ToastController) { }
 
   getData() {
     return this.http.get(this.endPointUrl).pipe(
       catchError((e) => {
-        return this.toast.create({ message: "API Error. Please make sure API is running." })
+        return this.toast.create(this.error);
       }),
       timeout(environment.timeout)
     );
@@ -23,7 +24,7 @@ export class DataService {
   postData(req?){
     return this.http.post(this.endPointUrl, req).pipe(
       catchError((e) => {
-        return this.toast.create({message: "API Error. Please make sure API is running."})
+        return this.toast.create(this.error);
       }),
       timeout(environment.timeout)
     );
