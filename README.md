@@ -1,12 +1,8 @@
-# bobsBananaBudgetAPP
+# Ionic 4 Test
 
-Bob's Banana Budget APP
-
-Do you need a budget for your bananas at Bob's very specific grocery store? Look no further! Just download Bob's Banana Budget App and API now! Input a start date and the amount of days you'd like to budget for! You can even enter past dates to see how much you spent in the past!
+Ionic 4 Test
 
 What you will need.
-
-You will need to be running bobsBananaBudgetAPI - https://github.com/eshinFG/bobsBananaBudgetAPI
 
 Please configure API before running the app.
 
@@ -29,10 +25,3 @@ http://localhost:8100/
 
 If your browser has not automatically opened.  Open your browser and enter the url above.
 
-Enter the date and number of days.
-
-Your budget will be calculated above the inputs!
-
-Now even YOU can budget for bananas at Bob's very specific grocery store...TODAY!
-
-bobsBananaBudgetAPP
